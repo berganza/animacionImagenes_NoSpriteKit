@@ -12,7 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var vistaImagenes: UIImageView!
     
     var audioPlayer: AVAudioPlayer?
     
@@ -21,16 +21,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        var imagesNames = ["1","2","3","4","5","6", "7","8","9","10","11"]
+        var nombreImagenes = ["1","2","3","4","5","6", "7","8","9","10","11"]
         
-        var images = [UIImage]()
-        for i in 0..<imagesNames.count {
-            images.append(UIImage(named: imagesNames[i])!)
+        var imagenes = [UIImage]()
+        for i in 0..<nombreImagenes.count {
+            imagenes.append(UIImage(named: nombreImagenes[i])!)
         }
         
-        imageView.animationImages = images
-        imageView.animationDuration = 0.45
-        imageView.startAnimating()
+        vistaImagenes.animationImages = imagenes
+        vistaImagenes.animationDuration = 0.45
+        vistaImagenes.startAnimating()
         
         playAudio()
     }
